@@ -105,22 +105,6 @@ input + svg {
 
 .filter-all:hover,
 .filter-all:checked + span,
-.filter-all:focus + span {
+filter-all:focus + span {
   color: var(--blue);
-}
-
-.beer:hover,
-.beer:checked + svg,
-.beer:focus + svg {
-  fill: var(--orange);
-}
-
-.hops:hover,
-.hops:checked + svg,
-.hops:focus + svg {
-  fill: var(--green);
-}
-
-/* page puttons */
-.page-btn {
 }

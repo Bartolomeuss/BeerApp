@@ -1,0 +1,38 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Old+Standard+TT&display=swap");
+
+/* custom properties */
+:root {
+  --off-white: #f2f2f2;
+  --black: rgba(0, 0, 16, 0.8);
+  --blue: #0365c0;
+  --green: #00cc4f;
+  --orange: #ffb144;
+  --disbled: rgba(0, 0, 16, 0.3);
+}
+/* resets */
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--off-white);
+  font-family: "Lato", sans-serif;
+  color: var(--black);
+  box-sizing: border-box;
+}
+
+header {
+  padding: 1rem 2rem;
+  background: var(--blue);
+  color: var(--off-white);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* container */
+.container {
+  padding: 1rem 2rem;
+}

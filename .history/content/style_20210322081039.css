@@ -1,0 +1,12 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Old+Standard+TT&display=swap");
+
+/* custom properties */
+:root {
+  --off-white: #f2f2f2;
+  --black: rgba(0, 0, 16, 0.8);
+  --blue: #0365c0;
+  --green: #00cc4f;
+  --orange: #ffb144;
+  --disbled: rgba(0, 0, 16, 0.3);
+}

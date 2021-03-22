@@ -120,7 +120,3 @@ input + svg {
 .hops:focus + svg {
   fill: var(--green);
 }
-
-/* page puttons */
-.page-btn {
-}
