@@ -2,9 +2,9 @@
 
 const urlBase ="https://api.punkapi.com/v2/beers";
 const filterABV = document.getElementById("filterABV");
-const filterIBU = document.getElementById("filterIBU");
+const filterIBU = document.getElementById("filerIBU");
 let optionsABV = "", optionsIBU = "";
-
+console.log(filterIBU)
 
 
 filterABV.addEventListener("change", e =>{
@@ -31,7 +31,8 @@ filterABV.addEventListener("change", e =>{
 
 
 filterIBU.addEventListener("change", e =>{
-    
+    const value = e.target.value;
+
     switch (value) {
         case "all":
             optionsIBU = "";

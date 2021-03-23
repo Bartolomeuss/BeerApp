@@ -31,7 +31,8 @@ filterABV.addEventListener("change", e =>{
 
 
 filterIBU.addEventListener("change", e =>{
-    
+    const value = e.target.value;
+
     switch (value) {
         case "all":
             optionsIBU = "";

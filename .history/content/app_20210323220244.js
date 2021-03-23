@@ -2,9 +2,9 @@
 
 const urlBase ="https://api.punkapi.com/v2/beers";
 const filterABV = document.getElementById("filterABV");
-const filterIBU = document.getElementById("filterIBU");
-let optionsABV = "", optionsIBU = "";
-
+const filterIBU = document.getElementById("filerIBU");
+let optionsABV = "";
+let optionsIBU = "";
 
 
 filterABV.addEventListener("change", e =>{
@@ -27,35 +27,34 @@ filterABV.addEventListener("change", e =>{
 
     getBeers();
 
-});
-
+})
 
 filterIBU.addEventListener("change", e =>{
-    
+    const value = e.target.value;
+
     switch (value) {
         case "all":
             optionsIBU = "";
             break
-        case "Weak":
+        case "ibuWeak":
             optionsIBU = "ibu_lt=35";
             break
-        case "Medium":
+        case "ibuMedium":
             optionsIBU = "ibu_gt=34&ibu_lt=75"; 
             break
-        case "Strong":
+        case "ibuStrong":
             optionsIBU =   "ibu_gt=74";   
             break
 
     }
     getBeers();
-
+    
 })
 
 
 
 async function getBeers(){
-    const url = urlBase + "?" + optionsABV + "?" + optionsIBU
-    console.log(url);
+    const url = urlBase + "?" + optionsABV;
     const promisedBeer = await fetch(url);
     const beerData = await promisedBeer.json(); 
     let html = "";

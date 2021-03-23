@@ -2,9 +2,8 @@
 
 const urlBase ="https://api.punkapi.com/v2/beers";
 const filterABV = document.getElementById("filterABV");
-const filterIBU = document.getElementById("filterIBU");
+const filterIBU = document.getElementById("filerIBU");
 let optionsABV = "", optionsIBU = "";
-
 
 
 filterABV.addEventListener("change", e =>{
@@ -27,11 +26,11 @@ filterABV.addEventListener("change", e =>{
 
     getBeers();
 
-});
-
+})
 
 filterIBU.addEventListener("change", e =>{
-    
+    const value = e.target.value;
+
     switch (value) {
         case "all":
             optionsIBU = "";
@@ -54,8 +53,7 @@ filterIBU.addEventListener("change", e =>{
 
 
 async function getBeers(){
-    const url = urlBase + "?" + optionsABV + "?" + optionsIBU
-    console.log(url);
+    const url = urlBase + "?" + optionsABV + "&" + optionsIBU;
     const promisedBeer = await fetch(url);
     const beerData = await promisedBeer.json(); 
     let html = "";
