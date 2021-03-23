@@ -1,19 +1,16 @@
 // variables:
 
 const urlBase ="https://api.punkapi.com/v2/beers";
-const filterABV = document.getElementById("filterABV");
-let optionsABV = "";
-
-
+const beers = document.querySelector('.beers');
 
 
 async function getBeers(){
     const promisedBeer = await fetch(urlBase);
     const beerData = await promisedBeer.json(); 
     let html = "";
-    const beers = document.querySelector('.beers');
     beerData.forEach(beer => {
-        
+        const beerName = beer.name;
+        const beerTagline = beer.tagline;
         html += `
         <div class="beer-wrapper card">
             <div class="beer">
@@ -25,16 +22,13 @@ async function getBeers(){
                 </span>
             </div>
             <div class="beer__content">
-                <div class="beer__name">${beer.name}</div>
-                <div class="beer__tagline">${beer.tagline}</div>
-                <div class="beer__description">${beer.description}</div>
-                <div class="beer__foodparing">
-                    Pair with:  ${beer.food_pairing.join(', ')}
-                </div>
+                <div class="beer__name"></div>
+                <div class="beer__tagline"></div>
+                <div class="beer__description"></div>
+                <div class="beer__foodparing"></div>
             </div>
         </div>
         `;
-        console.log(beer)
         beers.innerHTML=html;
         
     });

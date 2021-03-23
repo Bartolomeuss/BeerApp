@@ -188,30 +188,3 @@ input + svg {
 .beer__content:hover {
   opacity: 0.92;
 }
-
-.beer__name {
-  margin: 0 auto 0.5rem auto;
-  font-family: "Old Standard TT", serif;
-  font-size: 2rem;
-  line-height: 1.07rem;
-  letter-spacing: -0.015em;
-}
-
-.beer__tagline {
-  padding-bottom: 0.5rem;
-  font-family: "Old Standard TT" serif;
-  font-style: italic;
-  border-bottom: 2px solid var(--blue);
-}
-
-.beer__description {
-  margin: 1 rem 0;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
-}
-
-.beer__food-pairing {
-  font-style: italic;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
-}

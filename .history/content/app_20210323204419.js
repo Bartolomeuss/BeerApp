@@ -1,17 +1,13 @@
 // variables:
 
 const urlBase ="https://api.punkapi.com/v2/beers";
-const filterABV = document.getElementById("filterABV");
-let optionsABV = "";
-
-
+const beers = document.querySelector('.beers');
 
 
 async function getBeers(){
     const promisedBeer = await fetch(urlBase);
     const beerData = await promisedBeer.json(); 
     let html = "";
-    const beers = document.querySelector('.beers');
     beerData.forEach(beer => {
         
         html += `
