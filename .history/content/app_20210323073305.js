@@ -11,12 +11,7 @@ async function getBeers(){
     newBeersArray.forEach(beer => {
         const beerName = beer.name;
         const beerTagline = beer.tagline;
-        html += `
-        <h2>${beerName}</h2>
-        <p>${beerTagline}</p>
-        `;
-        beers.innerHTML=html;
-        
+        console.log(`${beerName} ${beerTagline}`)
     });
 
 
