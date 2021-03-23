@@ -11,10 +11,11 @@ async function getBeers(){
     beerData.forEach(beer => {
         const beerName = beer.name;
         const beerTagline = beer.tagline;
+        
         html += `
         <div class="beer-wrapper card">
             <div class="beer">
-                <img class='beer__img' src="${beer.image_url}">
+                <img class="beer__img' src="${beer.image_url}">
                 <h3>${beer.name}</h3>
                 <span class="beer__info">
                     <span>ABV: ${beer.abv}% </span>

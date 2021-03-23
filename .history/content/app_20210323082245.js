@@ -11,6 +11,7 @@ async function getBeers(){
     beerData.forEach(beer => {
         const beerName = beer.name;
         const beerTagline = beer.tagline;
+        console.log(beer)
         html += `
         <div class="beer-wrapper card">
             <div class="beer">
